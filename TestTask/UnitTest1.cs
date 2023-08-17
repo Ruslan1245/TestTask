@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace TestTask
 {
@@ -29,7 +30,12 @@ namespace TestTask
             driver.FindElement(By.XPath("/html/body/div[1]/main/section[1]/div[1]/div/div[2]/div/a[2]/span")).Click();
             driver.FindElement(By.XPath("/html/body/div[1]/main/section[1]/div[2]/div/div/div[2]/form/div/input")).SendKeys("pishi_gdu@ukr.net");
             driver.FindElement(By.XPath("/html/body/div[1]/main/section[1]/div[2]/div/div/div[2]/form/button")).Click();
-            driver.FindElement(By.XPath("//a[text()='На головну']")).Click();
+            
+            Thread.Sleep(4000);
+
+            driver.FindElement(By.XPath("/html/body/div[1]/main/section[1]/div[1]/div/div[1]/a")).Click(); 
+
+            
 
 
         }
